@@ -23,7 +23,7 @@ function searchCity(cityname) {
          
         var cityNameEl = $("<h2>").text(response.name);
         var displayMainDate = cityNameEl.append(" " + mainDate);
-        var tempEL = $("<p>").text("Tempraturer: " + response.main.temp);
+        var tempEL = $("<p>").text("Temperature: " + response.main.temp);
         var humEl = $("<p>").text("Humidity: " + response.main.humidity);
         var windEl = $("<p>").text("Wind Speed: " + response.wind.speed);
         var currentweather = response.weather[0].main;
@@ -46,7 +46,7 @@ function searchCity(cityname) {
             var currentIcon = $('<img>').attr("src", "http://openweathermap.org/img/wn/13d.png");
             currentIcon.attr("style", "height: 60px; width: 60px");
         }
-        //create HTML div to append new elements to render on page....
+       
         var newDiv = $('<div>');
 
         newDiv.append(displayMainDate, currentIcon, tempEL, humEl, windEl);
@@ -54,7 +54,7 @@ function searchCity(cityname) {
         $("#current").html(newDiv);
  
 
-        //--------------------------------------------- UV call ---------------------------------------//
+        
 
         var lat = response.coord.lat;
         var lon = response.coord.lon;
@@ -75,28 +75,28 @@ function searchCity(cityname) {
     });
 
 
-    //--------------------------------------------5 Day frocast call ---------------------------------------//
+    
 
     $.ajax({
         url: queryURLforcast,
         method: 'GET'
     }).then(function (response) {
-        // Storing an array of results in the results variable
+       
         var results = response.list;
-        //empty 5day div--------
+        
         $("#5day").empty();
-        //create HTML for 5day forcast................
+       
         for (var i = 0; i < results.length; i += 8) {
-            // Creating a div
+           
             var fiveDayDiv = $("<div class='card shadow-lg text-white bg-primary mx-auto mb-10 p-2' style='width: 8.5rem; height: 11rem;'>");
 
-            //Storing the responses date temp and humidity.......
+            
             var date = results[i].dt_txt;
             var setD = date.substr(0, 10)
             var temp = results[i].main.temp;
             var hum = results[i].main.humidity;
 
-            //creating tags with the result items information.....
+            
             var h5date = $("<h5 class='card-title'>").text(setD);
             var pTemp = $("<p class='card-text'>").text("Temp: " + temp);;
             var pHum = $("<p class='card-text'>").text("Humidity " + hum);;
@@ -137,15 +137,15 @@ function searchCity(cityname) {
 
 }
 pageLoad();
-//----------------------------------------Event handler for user city search-----------------------//
+
 
 $("#select-city").on("click", function (event) {
-    // Preventing the button from trying to submit the form......
+   
     event.preventDefault();
-    // Storing the city name........
+    
     var cityInput = $("#city-input").val().trim();
 
-    //save search term to local storage.....
+    
     var textContent = $(this).siblings("input").val();
     var storearr = [];
     storearr.push(textContent);

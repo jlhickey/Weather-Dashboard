@@ -23,12 +23,10 @@ THEN I am again presented with current and future conditions for that city
 
 ## Mock Up
 
- [screen shot](https://github.com/jlhickey/ReadMe-generator/blob/main/EmployeeTracker.png)
-
-
-
 There is a demo video of how well my ReadMe assignment went
 To watch it, go to:https://github.com/jlhickey/Weather-Dashboard/blob/main/Weather-Dashboard.mov
+
+
 ## MY REPOSITORIES
 - [My Employee-Tracker Project: https://github.com/jlhickey/Weather-Dashboard]
 - [MyGitHub: https://github.com/jlhickey]

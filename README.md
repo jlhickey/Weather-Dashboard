@@ -28,5 +28,5 @@ To watch it, go to:https://github.com/jlhickey/Weather-Dashboard/blob/main/Weath
 
 
 ## MY REPOSITORIES
-- My Employee-Tracker Project: https://github.com/jlhickey/Weather-Dashboard
+- My Weather-Dashboard Project: https://github.com/jlhickey/Weather-Dashboard
 - MyGitHub: https://github.com/jlhickey
